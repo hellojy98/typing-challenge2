@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SPGI Speed Typing Challenge 2025</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game-area">
+    <h1>⚡ SPGI Speed Typing Challenge 2025 </h1>
+
+    <!-- Rules Section -->
+    <div id="rules" style="text-align:left; margin-bottom:15px; font-size:18px; line-height:1.5; max-width:600px; margin-left:auto; margin-right:auto;">
+      <h2>Rules:</h2>
+      <ol>
+        <li>Enter your name before starting the challenge.</li>
+        <li>Press <strong>Start Now</strong> to start the countdown, then type directly in the text box.</li>
+        <li>Press <strong>Enter</strong> to submit once completed. Only 100% correct sentences can be submitted to stop the time.</li>
+        <li>Each person gets 2 tries! The shortest time will be selected.</li>
+      </ol>
+    </div>
+
+    <!-- Player name input -->
+    <input type="text" id="player-name" placeholder="Enter your name" style="font-size:18px; padding: 8px; width: 250px; margin-bottom: 15px;" />
+
+    <!-- Start Now button -->
+    <button onclick="startCountdown()" style="margin-bottom: 25px;">Start Now</button>
+
+    <p id="countdown"></p>
+
+    <div id="quote" class="quote-box">
+      <span id="quote-output"></span>
+    </div>
+
+    <textarea id="input" placeholder="Wait for countdown..." disabled></textarea>
+
+    <button id="submit-btn" disabled>Submit</button>
+
+    <div id="stats">
+      <p>⏱ Time: <span id="timer">0</span> sec</p>
+    </div>
+
+    <div id="result" style="display:none; margin-top:20px;"></div>
+
+    <!-- Leaderboard -->
+    <div id="leaderboard" style="margin-top: 40px; max-width: 400px; margin-left:auto; margin-right:auto; text-align:left;">
+      <h2>🏆 Leaderboard (Top 3)</h2>
+      <ol id="leaderboard-list">
+        <!-- Filled dynamically -->
+      </ol>
+      <button id="reset-leaderboard-btn" style="margin-top: 10px;">Reset Leaderboard</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
